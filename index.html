@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APIN Hub</title>
+    <script>
+      (function() {
+        // Check if a theme is saved in localStorage
+        const savedTheme = localStorage.getItem('theme');
+        
+        // If they have explicitly chosen light, respect it.
+        // Otherwise, default to dark.
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Covers savedTheme === 'dark', savedTheme === null (first visit), or 'system'
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
