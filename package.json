@@ -1,7 +1,8 @@
 {
-  "name": "asmat",
+  "name": "apinhub",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://dashboard.apin.org.ng",
   "type": "module",
   "scripts": {
     "dev": "vite",
