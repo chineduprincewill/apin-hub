@@ -24,7 +24,7 @@ const Home = () => {
       
         return (platforms ?? []).filter((platform) => {
           if (q) {
-            const matchesText = [platform.title, platform.caption, platform.description, platform.category]
+            const matchesText = [platform.title, platform.caption, platform.description, platform.category, platform.tags]
               .some((field) => field?.toLowerCase().includes(q));
             if (!matchesText) return false;
           }
